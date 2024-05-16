@@ -1,0 +1,25 @@
+.slidebar{
+    background-color:#0c0f19f5;
+color: rgb(103, 107, 126);
+}
+.front{
+    font-weight: 600;
+    color: #ffffff;
+    
+}
+
+  @media screen and (max-width: 768px) {
+    .bars{
+        display: none;
+        position: fixed;
+        left:60%;
+        background:#ffffff;
+        padding:10px;
+        border-radius: 10px;
+        z-index: 9;
+      } 
+      .bar{
+        display: flex;
+      }
+
+}
