@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
-import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
+import {  HiOutlineSearch } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
+import logo from "../shared/logo.jpg";
+import { UilBars } from "@iconscout/react-unicons";
 import { IoIosArrowDown } from "react-icons/io";
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { RiNotification4Line } from "react-icons/ri";
@@ -10,16 +12,26 @@ export default function Header() {
 	const navigate = useNavigate()
 
 	return (
-		<div className="bg-white h-20 px-3 flex items-center border-b border-gray-200 shadow-lg justify-between  ">
-			<div className="relative">
-				<HiOutlineSearch fontSize={20} className="text-gray-500 absolute top-1/2 left-3 -translate-y-1/2" />
+		<div className="bg-white h-20 p-2  flex items-center border-b border-gray-200 shadow-lg justify-between left-2   ">
+
+		<div className=" left-2  shadow-sm lg:hidden px-4"
+   ><span className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 left-2 shadow-sm lg:hidden  "
+   >
+  <UilBars className=""  />
+   </span>
+   
+			
+   </div>
+			<div className="relative  ">
+				<img src={logo} className='w-10 lg:hidden md:left-0 max-md:left-0  absolute top-1/2  -translate-y-1/2 block  mx-0'/>
+				<HiOutlineSearch fontSize={20} className="text-gray-500 absolute top-1/2 left-4   -translate-y-1/2 max-sm:hidden max-md:hidden md:hidden  " />
 				<input
 					type="text"
 					placeholder=" Type of search..."
-					className="text-md focus:outline-none active:outline-none border border-white w-[24rem] h-10 pl-11 pr-4 rounded-sm"
+					className="text-md  border-white w-[24rem] h-10 pl-11 pr-4 rounded-sm max-sm:w-0 md:px-12 max-md:w-2  focus:outline-none active:outline-none border left-8 "
 				/>
 			</div>
-			<div className="flex items-center gap-2 mr-2">
+			<div className="flex items-center gap-2 mr-6  ">
 			<Popover className="relative">
 					{({ open }) => (
 						<>
@@ -37,7 +49,7 @@ export default function Header() {
 								as={Fragment}
 								enter="transition ease-out duration-200"
 								enterFrom="opacity-0 translate-y-1"
-								enterTo="opacity-100 translate-y-0"
+								enterTo="opacity-100 translate-y-0"   
 								leave="transition ease-in duration-150"
 								leaveFrom="opacity-100 translate-y-0"
 								leaveTo="opacity-0 translate-y-1"
@@ -85,14 +97,14 @@ export default function Header() {
 						</>
 					)}
 				</Popover>
-				<span>Thomas Anree</span>	
+				<span className='hidden text-right lg:block sm:hidden'>Thomas Anree</span>	
 				<Menu as="div" className="relative">
 					<div>
 						<Menu.Button className="ml-2 bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-neutral-400">
-							<span className="sr-only">Open user menu</span>
+							
 							<div
 								className="h-12 w-12 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
-								style={{ backgroundImage: 'url("https://source.unsplash.com/80x80?face")' }}
+								style={{ backgroundImage: 'url("https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg")' }}
 							>
 						
 							
@@ -150,7 +162,7 @@ export default function Header() {
 							</Menu.Item>
 						</Menu.Items>
 					</Transition>
-				</Menu><IoIosArrowDown/>
+				</Menu><IoIosArrowDown className='sm:hidden max-sm:hidden lg:visible'/>
 			</div>
 		</div>
 	)

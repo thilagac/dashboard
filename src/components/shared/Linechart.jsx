@@ -1,54 +1,63 @@
 
-import { AreaChart, Card, Title } from '@tremor/react'
+import { AreaChart, BarChart, Card, Title } from '@tremor/react'
+import ReactEcharts from "echarts-for-react";
 
-const generateData = () => {
-  let dataset = []
-  const dates = [
-    'Jan',
-    'feb',
-    'mar',
-    'apr',
-    'may',
-    'jun',
-    'jul',
-    'aug',
-    'sep',
-    'oct',
-    'nov',
-    'dec'
 
-  ]
 
-  for (let date of dates) {
-    dataset.push({
-      date,
-      'Total Sales': Math.round(100 + Math.random() * 20 - 10),
-      'Total Revenue': Math.round(200 + Math.random() * 20 - 10),
-      
-    })
-  }
 
-  return dataset
-}
 
-const mockDataset = generateData()
-console.log(mockDataset)
+export default function Bar() {
 
-export default function ChartGraph() {
+  const option = {
+    title: {
+      text: ''
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['Email', 'Union Ads']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        name: 'Email',
+        type: 'line',
+        stack: 'Total',
+        data: [120, 132, 101, 134, 90, 230, 210]
+      },
+      {
+        name: 'Union Ads',
+        type: 'line',
+        stack: 'Total',
+        data: [220, 182, 191, 234, 290, 330, 310]
+      },
+     
+    ]
+  };;
   return (
-    <Card className=' lg:w-full sm:w-full md:w-full max-sm:w-full  shadow-md border-slate-600'>
-      
-      <AreaChart
-        className='mt-6 h-64'
-        defaultValue={0}
-        data={mockDataset}
-        categories={['Total Sales', 'Total Revenue' ]}
-        index='date'
-        colors={["indigo", "green"]}
-        allowDecimals={false}
-        yAxisWidth={60}
-        noDataText='No data. Run your first test to get started!'
-      />
-    </Card>
+    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5  lg:w-full sm:w-full md:w-full  shadow-md ">
+      <Title className='mb-2 p-4'>My admin dashboard</Title>
+      <ReactEcharts option={option} />
+     
+    </div>
   )
 }

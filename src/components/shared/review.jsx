@@ -15,7 +15,7 @@ function Review() {
                       <a href="messages" class="flex items-center gap-5 px-7 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
                       <div class="relative h-14 w-14 rounded-full">
                         <img src={data.Img} alt="User"/>
-                        <span class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"></span>
+                        <span class="absolute   border-2 rounded-full border-white bottom-0 right-0 h-3.5 w-3.5 bg-green-500"></span>
                       </div>
   
                        <div class="flex flex-1 items-center justify-between">
