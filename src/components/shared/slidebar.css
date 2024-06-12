@@ -1,4 +1,3 @@
-
 .sidebarcontainer {
   overflow: auto;
 }
@@ -7,6 +6,6 @@
   width: 0; /* For Chrome, Safari, and Opera */
 }
 
-.n{
+.n {
   background-color: #eff4fb;
 }

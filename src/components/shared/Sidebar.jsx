@@ -12,7 +12,7 @@ import {
   DASHBOARD_SIDEBAR_LINKS,
   DASHBOARD_SIDEBAR_BOTTOM_LINKS,
   DASHBOARD_SIDEBAR_BOTTOM,
-  Chart
+  Chart,
 } from "../../lib/data";
 import { HiOutlineViewGrid, HiOutlineCog } from "react-icons/hi";
 import "../shared/slidebar.css";
@@ -30,7 +30,7 @@ const linkClass =
   "flex items-center text-[#dee4ee]  gap-2 w-60 px-2 py-3 hover:bg-slate-800 rounded-sm";
 
 const Sidebar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [selected, setSelected] = useState(0);
   const [Task, setTask] = useState(false);
   const [Form, setForm] = useState(false);
@@ -277,7 +277,7 @@ const Sidebar = () => {
         <h3 class="mb-2 ml-3 text-sm font-medium text-bodydark2  text-[#8a99af]">
           OTHERS
         </h3>
-        
+
         <div className=" no-scrollbar  duration-300 ease-linear mb-7 flex flex-1 flex-col font-medium gap-0.5">
           <div className="text-md text-white ">
             <div className="relative flex flex-col ">
@@ -305,42 +305,32 @@ const Sidebar = () => {
                     className="top-1   flex flex-col items-start  px-2 mx-4 w-full"
                     style={{ backgroundColor: "#1C2434" }}
                   >
-                  
-                 
-                      <div>
-                        <div
+                    <div>
+                      <div
                         className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
-                        
-                        onClick={() => navigate('/Charts')}
-                        
+                        onClick={() => navigate("/Charts")}
                       >
-                        <h3 >Basic Chart </h3>
-                       
+                        <h3>Basic Chart </h3>
                       </div>
                       <div
                         className="flex  w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
-                        
-                        onClick={() => navigate('/AdvanceChart')}
-                        
+                        onClick={() => navigate("/AdvanceChart")}
                       >
-                        <h3  >Advance Chart </h3>
-                        
+                        <h3>Advance Chart </h3>
                       </div>
-                      </div>
-                     
-                   
+                    </div>
                   </div>
                 )}
               </div>
               <div className="flex flex-col text-md font-medium gap-0.5 pt-2  ">
-          {DASHBOARD_SIDEBAR_BOTTOM.map((link) => (
-            <SidebarLink
-              key={link.key}
-              link={link}
-              className="front font-medium "
-            />
-          ))}
-        </div>
+                {DASHBOARD_SIDEBAR_BOTTOM.map((link) => (
+                  <SidebarLink
+                    key={link.key}
+                    link={link}
+                    className="front font-medium "
+                  />
+                ))}
+              </div>
               <button
                 onClick={() => setTask((prev) => !prev)}
                 className="p-2 w-full py-3 text-slate-300 flex front font-medium items-center   hover:bg-slate-800 rounded-sm"
@@ -365,9 +355,7 @@ const Sidebar = () => {
                     className="top-1   flex flex-col items-start  px-2 mx-4 w-full"
                     style={{ backgroundColor: "#1C2434" }}
                   >
-                   
                     {Chart.map((item, i) => (
-
                       <div
                         className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
                         key={i}

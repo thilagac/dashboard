@@ -31,44 +31,41 @@ function Map() {
           </div>
         </div>
         <div className="p-0 md:p-6 xl:p-7.5">
-
-        {MapData.map((map)=>(
-          <div className="flex flex-col gap-7  text-gray-500 ">
-            <div className="flex items-center gap-3 p-1">
-              <div className="w-2/12 xl:w-3/12">
-                <div className="flex items-center gap-4 p-2 ">
-                  <div className="2xsm:h-11 2xsm:w-full 2xsm:max-w-11 2xsm:rounded-full">
-                    <img src={map.Img} alt="User" className="w-12"/>
+          {MapData.map((map) => (
+            <div className="flex flex-col gap-7  text-gray-500 ">
+              <div className="flex items-center gap-3 p-1">
+                <div className="w-2/12 xl:w-3/12">
+                  <div className="flex items-center gap-4 p-2 ">
+                    <div className="2xsm:h-11 2xsm:w-full 2xsm:max-w-11 2xsm:rounded-full">
+                      <img src={map.Img} alt="User" className="w-12" />
+                    </div>
+                    <span className="hidden font-medium xl:block">
+                      {map.Name}
+                    </span>
                   </div>
-                  <span className="hidden font-medium xl:block">{map.Name}</span>
+                </div>
+                <div className="w-6/12 2xsm:w-5/12 md:w-3/12">
+                  <span className="font-medium">{map.email}</span>
+                </div>
+                <div className="hidden w-4/12 md:block xl:w-3/12">
+                  <span className="font-medium">25 Dec 2024 - 28 Dec 2024</span>
+                </div>
+                <div className="hidden w-1/12 xl:block">
+                  <span className="font-medium">3 Days</span>
+                </div>
+                <div className="w-4/12 2xsm:w-3/12 md:w-2/12 xl:w-1/12">
+                  <span className="inline-block rounded  py-0.5 px-2.5 text-sm font-medium bg-red/[0.08] text-red ">
+                    Lost Lead
+                  </span>
+                </div>
+                <div className="hidden w-2/12 2xsm:block md:w-1/12">
+                  <button className="mx-auto block hover:text-meta-1">
+                    jjj
+                  </button>
                 </div>
               </div>
-              <div className="w-6/12 2xsm:w-5/12 md:w-3/12">
-                <span className="font-medium">{map.email}</span>
-              </div>
-              <div className="hidden w-4/12 md:block xl:w-3/12">
-                <span className="font-medium">25 Dec 2024 - 28 Dec 2024</span>
-              </div>
-              <div className="hidden w-1/12 xl:block">
-                <span className="font-medium">3 Days</span>
-              </div>
-              <div className="w-4/12 2xsm:w-3/12 md:w-2/12 xl:w-1/12">
-                <span className="inline-block rounded  py-0.5 px-2.5 text-sm font-medium bg-red/[0.08] text-red ">
-                  Lost Lead
-                </span>
-              </div>
-              <div className="hidden w-2/12 2xsm:block md:w-1/12">
-                <button className="mx-auto block hover:text-meta-1">
-                 jjj
-                </button>
-              </div>
             </div>
-           
-          
-          </div>
-
-        ))}
-          
+          ))}
         </div>
       </div>
     </>
