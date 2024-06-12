@@ -50,7 +50,7 @@ const Sidebar = () => {
     <div className="h-full">
       <motion.div className="px-6  max-lg:hidden bg-[#1C2434]  sidebarcontainer h-full">
         <div className="flex gap-2 top-0 h-20  w-60 p-2 mx-0 max-sm:mx-0 max-md:mx-0   bg-[#1C2434] z-20 fixed">
-          <div className="pt-4">
+          <div className="pt-4" onClick={() => navigate("/home")}>
             <img src={img} className="w-40 " />
           </div>
         </div>
@@ -128,17 +128,24 @@ const Sidebar = () => {
                     style={{ backgroundColor: "#1C2434" }}
                   >
                     <h3 className="px-4 py-2">eCommerce</h3>
-                    {list.map((item, i) => (
-                      <div
+                    <div
                         className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
-                        key={i}
+                        onClick={() => navigate("/list")}
                       >
-                        <h3>{item.data}</h3>
+                        <h3>List</h3>
                         <h3 className=" bg-[#3C50E0] text-xs rounded-md px-2 p-1 text-white">
-                          {item.icon}
+                          pro
                         </h3>
                       </div>
-                    ))}
+                      <div
+                        className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
+                        onClick={() => navigate("/list2")}
+                      >
+                        <h3>List</h3>
+                        <h3 className=" bg-[#3C50E0] text-xs rounded-md px-2 p-1 text-white">
+                          pro
+                        </h3>
+                      </div>
                   </div>
                 )}
               </div>
@@ -166,18 +173,23 @@ const Sidebar = () => {
                     className="top-1   flex flex-col items-start  px-2 mx-4 w-full"
                     style={{ backgroundColor: "#1C2434" }}
                   >
-                    <h3 className="px-4 py-2">eCommerce</h3>
-                    {list.map((item, i) => (
+                    
+                    <div
+                        className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
+                        onClick={() => navigate("/basicForm")}
+                      >
+                        <h3>Basic Form</h3>
+                        
+                      </div>
                       <div
                         className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
-                        key={i}
+                        onClick={() => navigate("/AdvanceForm")}
                       >
-                        <h3>{item.data}</h3>
+                        <h3>Advance Form</h3>
                         <h3 className=" bg-[#3C50E0] text-xs rounded-md px-2 p-1 text-white">
-                          {item.icon}
+                          pro
                         </h3>
                       </div>
-                    ))}
                   </div>
                 )}
               </div>
@@ -205,18 +217,25 @@ const Sidebar = () => {
                     className="top-1   flex flex-col items-start  px-2 mx-4 w-full"
                     style={{ backgroundColor: "#1C2434" }}
                   >
-                    <h3 className="px-4 py-2">eCommerce</h3>
-                    {list.map((item, i) => (
+                    
+                   
                       <div
                         className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
-                        key={i}
+                        onClick={() => navigate("/basicTable")}
                       >
-                        <h3>{item.data}</h3>
+                        <h3>Basic Table</h3>
+                        
+                      </div>
+                      <div
+                        className="flex w-full justify-between text-md text-[#8a99af] cursor-pointer   p-1 group  items-center gap-2.5 rounded-md px-4 font-medium  hover:text-white"
+                        onClick={() => navigate("/AdvanceTable")}
+                      >
+                        <h3>Advance Table</h3>
                         <h3 className=" bg-[#3C50E0] text-xs rounded-md px-2 p-1 text-white">
-                          {item.icon}
+                          pro
                         </h3>
                       </div>
-                    ))}
+                    
                   </div>
                 )}
               </div>

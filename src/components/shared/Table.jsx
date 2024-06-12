@@ -11,19 +11,19 @@ function Table() {
     <div class="flex flex-col">
       <div class="grid grid-cols-3 rounded-sm bg-gray-2  sm:grid-cols-5">
         <div class="p-2.5 xl:p-5">
-          <h5 class="text-sm font-medium uppercase xsm:text-base">Source</h5>
+          <h5 class="text-sm font-medium uppercase xsm:text-base text-gray-600 ">Source</h5>
         </div>
         <div class="p-2.5 text-center xl:p-5">
-          <h5 class="text-sm font-medium uppercase xsm:text-base">Visitors</h5>
+          <h5 class="text-sm font-medium uppercase xsm:text-base text-gray-600 ">Visitors</h5>
         </div>
         <div class="p-2.5 text-center xl:p-5">
-          <h5 class="text-sm font-medium uppercase xsm:text-base">Revenues</h5>
+          <h5 class="text-sm font-medium uppercase xsm:text-base text-gray-600 ">Revenues</h5>
         </div>
         <div class="hidden p-2.5 text-center sm:block xl:p-5">
-          <h5 class="text-sm font-medium uppercase xsm:text-base">Sales</h5>
+          <h5 class="text-sm font-medium uppercase xsm:text-base text-gray-600 ">Sales</h5>
         </div>
         <div class="hidden p-2.5 text-center sm:block xl:p-5">
-          <h5 class="text-sm font-medium uppercase xsm:text-base">Conversion</h5>
+          <h5 class="text-sm font-medium uppercase xsm:text-base text-gray-600 ">Conversion</h5>
         </div>
       </div>
       {
